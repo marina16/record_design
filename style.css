@@ -1,0 +1,338 @@
+html {
+    height: 2900px;
+    width: 100%;
+    background-image: url("img/winter-3.jpg");
+    background-position: center top;
+    background-repeat: repeat-x;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+}
+body {
+    height: 2900px;
+    width: 100%;
+    background-image: url("img/concept-27_backgr.png");
+    background-repeat: no-repeat repeat-x;
+    background-position: center top;
+}
+.main {
+    height: 100%;
+    width: 960px;
+    vertical-align: top;
+    margin: 0 auto;
+}
+header {
+    position: relative;
+    height: 195px;
+    width: 100%;
+}
+logo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 150px;
+    width: 155px;
+    text-align: center;
+    vertical-align: top;
+}
+logo img {
+    height: 150px;
+    vertical-align: top;
+}
+header h1 {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    font-size: 23px;
+}
+header span {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    font-family: 'Ubuntu Condensed';
+    font-size: 17px;
+    color: #B9B7B3;
+}
+menu {
+    height: 57px;
+    width: 100%;
+}
+.name {
+    position: relative;
+    height: 793px;
+    width: 100%;
+}
+.name h2 {
+    position: absolute;
+    top: 343px;
+    left: 0;
+    color: #ffffff;
+}
+.name h3 {
+    position: absolute;
+    top: 368px;
+    left: 0;
+    color: #ffffff;
+}
+h2 {
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 23px;
+}
+h3 {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 20px;
+}
+.selected_img {
+    position: absolute;
+    top: 325px;
+    right: 285px;
+    height: 72px;
+    width: 75px;
+}
+.selected_img1,
+.selected_img2,
+.selected_img3 {
+    height: 20px;
+    width: 20px;
+    margin: 0;
+    padding: 0;
+    border-radius: 100%;
+    border: none;
+    background-color: #000000;
+    cursor: pointer;
+}
+.selected_img1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.selected_img2 {
+    position: absolute;
+    top: 26px;
+    left: 28px;
+}
+.selected_img3 {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+ }
+.selected_oval {
+    height: 20px;
+    width: 20px;
+    vertical-align: top;
+    font-size: 15px;
+    line-height: 11px;
+    color: rgba(255,255,255,0);
+}
+.selected_img1:hover .selected_oval,
+.selected_img2:hover .selected_oval,
+.selected_img3:hover .selected_oval {
+    color: rgba(255,255,255,.7);
+}
+.active .selected_oval {
+    color: rgba(255,255,255,.7);
+}
+nav {
+    height: 905px;
+    width: 100%;
+}
+nav .left {
+    z-index: 1;
+    position: relative;
+    float: left;
+    height: 896px;
+    width: 156px;
+    overflow: hidden;
+    margin-top: 10px;
+    text-align: center;
+}
+.img_box {
+    z-index: 2;
+    position: relative;
+    height: 896px;
+    width: 156px;
+}
+.img_box img {
+    margin-bottom: 10px;
+}
+.down_part {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 154px;
+    width: 156px;
+    background-image: url("img/img-clip_top.png");
+    background-repeat: no-repeat;
+}
+.up_part {
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 154px;
+    width: 156px;
+    background-image: url("img/img-clip_bottom.png");
+    background-repeat: no-repeat;
+}
+nav .center {
+    float: left;
+    height: 100%;
+    width: 274px;
+    margin-left: 50px;
+}
+.center_box {
+    float: left;
+    height: 105px;
+    width: 100%;
+}
+.center_box-img{
+    display: inline-block;
+    height: 50px;
+    width: 65px;
+    margin-right: 10px;
+    text-align: center;
+}
+.nav_link_text {
+    color: #ffffff;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-size: 20px;
+}
+.nav_link img {
+    height: 50px;
+    vertical-align: middle;
+}
+nav .right {
+    float: right;
+    position: relative;
+    height: 100%;
+    width: 480px;
+    vertical-align: bottom;
+}
+.empty {
+    height: 115px;
+    width: 100%;
+}
+.form {
+    height: 510px;
+    width: 100%;
+}
+.center a {
+    text-decoration: none;
+}
+.right h2 {
+    position: absolute;
+    top: 337px;
+    right: 0;
+    color: #ffffff;
+    font-weight: 300;
+    font-family: 'Ubuntu';
+    font-size: 30px;
+    line-height: 32px;
+
+}
+.flashlevel {
+    position: absolute;
+    top: 410px;
+    right: 0;
+    color: #ffffff;
+    font-family: 'Ubuntu Condensed';
+}
+.right_folow {
+    position: absolute;
+    top: 752px;
+    height: 153px;
+    width: 100%;
+}
+.twitter {
+    position: absolute;
+    right: 100px;
+    top: 18px;
+}
+.facebook {
+    position: absolute;
+    top: 120px;
+    right: 65px;
+    max-height: 33px;
+}
+.facebook span, .twitter span {
+    vertical-align: text-top;
+    margin-right: 10px;
+    color: #ffffff;
+    font-family: 'Ubuntu Condensed';
+    font-size: 13.5pt;
+    line-height: 2pt;
+}
+.twitter span {
+    margin-left: 10px;
+}
+blockquote {
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 28px;
+}
+blockquote span {
+    font-family: 'Ubuntu';
+    font-weight: 700;
+    font-size: 35px;
+}
+.contact_us {
+    display: inline-block;
+    height: 30px;
+    padding: 10px;
+    padding-bottom: 0;
+    background-color: rgba(44,79,72,0.5);;
+    color: #ffffff;
+    font-style: oblique;
+}
+.form_box{
+    height: auto;
+    width: 385px;
+    margin-top: 40px;
+}
+input,
+textarea,
+.sendsubmit {
+    margin:0;
+    padding: 0;
+    text-indent: 15px;
+    border: none;
+    background-color: #191919;
+    color: #ffffff;
+    font-family: 'Ubuntu';
+    font-size: 18px;
+    font-weight: 700;
+}
+input {
+    height: 44px;
+    width: 100%;
+    margin-bottom: 15px;
+    font-family: 'Ubuntu';
+}
+textarea {
+    height: 178px;
+    width: 100%;
+    max-width: 385px;
+    padding-top: 18px;
+    font-family: 'Ubuntu';
+}
+.sendsubmit {
+    float: right;
+    margin-top: 25px;
+    background-color: transparent ;
+    cursor: pointer;
+}
+.sendsubmit span{
+    vertical-align: top;
+    line-height: 22px;
+    cursor: pointer;
+    color: #000000;
+}
+.sendsubmit img{
+    height: 22px;
+    width: 22px;
+    margin-right: 5px;
+}

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:700,400,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+    <div class="main">
+        <header>
+            <logo>
+                <img src="img/jukt_logo.png">
+            </logo>
+            <h1>
+                green4good
+            </h1>
+            <span>
+                featured project
+            </span>
+        </header>
+        <menu>
+        </menu>
+        <div class="name">
+            <h2>
+                Flashlevel
+            </h2>
+            <h3>
+                Award Winning Design Studio
+            </h3>
+            <div class="selected_img">
+                <button class="selected_img1"><span class="selected_oval">&#9679;</span></button>
+                <button class="selected_img2"><span class="selected_oval">&#9679;</span></button>
+                <button class="selected_img3 active"><span class="selected_oval">&#9679;</span></button>
+            </div>
+        </div>
+        <script>
+            var backgroundChange = function(image){
+                $('button.active').removeClass('active');
+                $('html').css('background-image','url("'+image+'")');
+            };
+            $('.selected_img1').click(function(){
+                backgroundChange('img/winter-1.jpg');
+                $('.selected_img1').addClass('active');
+            });
+            $('.selected_img2').click(function(){
+                backgroundChange('img/winter-2.jpg');
+                $('.selected_img2').addClass('active');
+            });
+            $('.selected_img3').click(function(){
+                backgroundChange('img/winter-3.jpg');
+                $('.selected_img3').addClass('active');
+            });
+        </script>
+        <nav>
+            <div class="left">
+                <div class="img_box">
+                    <div id="tickerContainer">
+                        <dl id="ticker">
+                            <dt class="heading"><img src="img/1.png"></dd>
+                            <dt class="heading"><img src="img/2.png"></dd>
+                            <dt class="heading"><img src="img/3.png"></dd>
+                            <dt class="heading"><img src="img/4.png"></dd>
+                            <dt class="heading"><img src="img/5.png"></dd>
+                        </dl>
+                    </div>
+                    <script type="text/javascript">
+                        $(function() {
+
+                            //cache the ticker
+                            var ticker = $("#ticker");
+
+                            //wrap dt:dd pairs in divs
+                            ticker.children().filter("dt").each(function() {
+
+                                var dt = $(this),
+                                        container = $("<div>");
+
+                                dt.next().appendTo(container);
+                                dt.prependTo(container);
+
+                                container.appendTo(ticker);
+                            });
+
+                            //hide the scrollbar
+                            ticker.css("overflow", "hidden");
+
+                            //animator function
+                            function animator(currentItem) {
+
+                                //work out new anim duration
+                                var distance = currentItem.height();
+                                duration = (distance + parseInt(currentItem.css("marginTop"))) / 0.025;
+
+                                //animate the first child of the ticker
+                                currentItem.animate({ marginTop: -distance }, duration, "linear", function() {
+
+                                    //move current item to the bottom
+                                    currentItem.appendTo(currentItem.parent()).css("marginTop", 0);
+
+                                    //recurse
+                                    animator(currentItem.parent().children(":first"));
+                                });
+                            };
+
+                            //start the ticker
+                            animator(ticker.children(":first"));
+
+                            //set mouseenter
+                            ticker.mouseenter(function() {
+
+                                //stop current animation
+                                ticker.children().stop();
+
+                            });
+
+                            //set mouseleave
+                            ticker.mouseleave(function() {
+
+                                //resume animation
+                                animator(ticker.children(":first"));
+
+                            });
+                        });
+                    </script>
+                </div>
+                <div class="up_part"></div>
+                <div class="down_part"></div>
+            </div>
+            <div class="center">
+                <div class="center_box">
+                    <div class="center_box-img">
+                    <a class="nav_link" href="index.html">
+                        <img src="img/love.png">
+                    </a>
+                    </div>
+                    <a class="nav_link_text" href="index.html">
+                        favorite
+                    </a>
+                </div>
+                <div class="center_box">
+                    <div class="center_box-img">
+                        <a class="nav_link" href="index.html">
+                            <img src="img/photo.png">
+                        </a>
+                    </div>
+                    <a class="nav_link_text" href="index.html">
+                        photo
+                    </a>
+                </div><div class="center_box">
+                <div class="center_box-img">
+                    <a class="nav_link" href="index.html">
+                        <img src="img/video.png">
+                    </a>
+                </div>
+                <a class="nav_link_text" href="index.html">
+                    video
+                </a>
+            </div><div class="center_box">
+                <div class="center_box-img">
+                    <a class="nav_link" href="index.html">
+                        <img src="img/star.png">
+                    </a>
+                </div>
+                <a class="nav_link_text" href="index.html">
+                    share
+                </a>
+            </div><div class="center_box">
+                <div class="center_box-img">
+                    <a class="nav_link" href="index.html">
+                        <img src="img/statistics.png">
+                    </a>
+                </div>
+                <a class="nav_link_text" href="index.html">
+                    statistics
+                </a>
+            </div><div class="center_box">
+                <div class="center_box-img">
+                    <a class="nav_link" href="index.html">
+                        <img src="img/pencil.png">
+                    </a>
+                </div>
+                <a class="nav_link_text" href="index.html">
+                    note
+                </a>
+            </div>
+            </div>
+            <div class="right">
+                <h2>
+                    Sometimes we tend to
+                    <br> get a little too creative
+                    <br>please forgive us.
+                </h2>
+                <span class="flashlevel">
+                        - flashlevel
+                    </span>
+                <div class="right_folow">
+                    <div class="facebook"><span>like us</span><img src="img/facebok.png"></div>
+                    <div class="twitter"><img src="img/folow.png"><span>folow us</span></div>
+                </div>
+            </div>
+        </nav>
+    <div class="empty">
+    </div>
+    <blockquote>
+        Being <span>creative</span> is not easy.
+            <br>Luckily, is what we do <span>best</span>.
+        </blockquote>
+    <span class="contact_us">Fill out this quick form below to contact us.</span>
+        <div class="form_box">
+            <input type="text" name="name" placeholder="Full name">
+            <input type="text" name="address" placeholder="Email address">
+            <textarea placeholder="Tell us about your project"></textarea>
+            <button class="sendsubmit"><img src="img/submit.png"><span>submit</span></button>
+        </div>
+    </div>
+</body>
+</html>
